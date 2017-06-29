@@ -1,23 +1,84 @@
 {{outlet}}
 <div class='tasks-list'>
+    <h1 class="heading">PINNED</h1>
+    {{#each model as |task|}}
+        {{#if task.isPinned}}
+        <div class="task-overflow">
 
-    <h3>My tasks</h3>
-    <table class='table table-striped'>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each task in taskList}}
-            <tr>
-                <td>{{task.title}}</td>
-                <td>{{task.content}}</td>
-                <td>{{task.date}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+            <div class="task-box prior-{{task.prior}} done-{{task.status}}">
+                <div class="settings-label">
+                    <span class="icon reverse" {{action 'doneToggleTask' task.id task.status}}>
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </span>
+                    <span class="icon" {{action 'deleteTask' task.id}}>
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </span>
+                    <span class="icon">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </span>
+                    <span class="icon pin-{{task.isPinned}}" {{action 'pinToggleTask' task.id task.isPinned}}>
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                    </span>
+                </div>
+                <h3 class="task-box-title">
+                    {{task.title}}
+                </h3>
+
+                <p class="task-box-desc">
+                    {{task.content}}
+                </p>
+                <div class="task-box-dates">
+                    <span class="date">{{moment-format task.created 'MMM DD YYYY'}}</span>
+                    <span class="date event-date">{{moment-format task.date 'MMM DD YYYY'}}</span>
+                </div>
+            </div>
+
+        </div>
+        {{/if}}
+    {{/each}}
+    <div class="break-line-margin"></div>
+    <h1 class="heading">TASKS</h1>
+    {{#each model as |task|}}
+        <div class="task-overflow">
+
+            <div class="task-box prior-{{task.prior}} done-{{task.status}}">
+                <div class="settings-label">
+                    <span class="icon reverse" {{action 'doneToggleTask' task.id task.status}}>
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </span>
+                    <span class="icon" {{action 'deleteTask' task.id}}>
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </span>
+                    <span class="icon">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </span>
+                    <span class="icon pin-{{task.isPinned}}" {{action 'pinToggleTask' task.id task.isPinned}}>
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                    </span>
+                </div>
+                <h3 class="task-box-title">
+                    {{task.title}}
+                </h3>
+
+                <p class="task-box-desc">
+                    {{task.content}}
+                </p>
+                <div class="task-box-dates">
+                    <span class="date">{{moment-format task.created 'MMM DD YYYY'}}</span>
+                    <span class="date event-date">{{moment-format task.date 'MMM DD YYYY'}}</span>
+                </div>
+            </div>
+
+        </div>
+    {{/each}}
+            {{#link-to 'tasks.new'}}
+            <div class="task-overflow">
+                <div class="task-box add-new-task-link">
+
+                    <span class="glyphicon glyphicon-plus"></span>
+                </div>
+            </div>
+            {{/link-to}}
+
+
 </div>

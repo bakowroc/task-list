@@ -8,11 +8,17 @@ export default Ember.Controller.extend({
             let title = this.get('title');
             let content = this.get('content');
             let date = this.get('date');
+            let isPinned = this.get('isPinned');
+            let prior = this.get('prior');
+
+            if(prior > 3) prior = 3;
 
             let newTask = this.store.createRecord('task', {
                 title: title,
                 content: content,
-                date: new Date(date)
+                date: new Date(date),
+                isPinned: isPinned,
+                prior: prior
             });
 
             newTask.save();
@@ -22,6 +28,8 @@ export default Ember.Controller.extend({
                 content: '',
                 date: null
             });
+
+            this.route.transitionTo('tasks');
 
         }
     }

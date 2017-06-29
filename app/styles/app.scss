@@ -1,3 +1,8 @@
+@import 'variables.scss';
+@import "ember-bootstrap/bootstrap";
+@import 'navigation.scss';
+@import 'tasks';
+
 *{
 
     transition: all 0.2s ease;
@@ -7,10 +12,28 @@
 body{
 
     font-family: 'Lato';
-    padding-top: 60px;
+    background: #222 url('/assets/img/bg.png');
+    background-size: cover;
 
 }
 
-@import 'navigation.scss';
-@import 'tasks';
-@import "ember-bootstrap/bootstrap";
+input, textarea{
+
+    border-radius: 0!important;
+    box-shadow: none!important;
+    border: 0!important;
+    border-bottom: 3px solid rgba(black, 0.1)!important;
+    resize: none!important;
+    background: none!important;
+    padding: 15px 0!important;
+    color: rgba(black, 0.4)!important;
+    font-size: 18px!important;
+    font-weight: 600!important;
+
+}
+
+.break-line-margin{
+
+    margin-bottom: 40px;
+
+}

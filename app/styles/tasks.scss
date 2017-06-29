@@ -1,17 +1,205 @@
 .tasks-list{
 
+    width: 100%;
     float: left;
-    width: 720px;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
+
+    .heading{
+
+        color: #ddd;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        font-weight: 800;
+        font-size: 16px;
+
+
+    }
+
+
+    .task-overflow{
+
+        display: inline-block;
+        width: 24.85%;
+        box-sizing: border-box;
+        padding: 10px;
+        color: #fff;
+        vertical-align: top;
+
+        .task-box{
+
+            float: left;
+            background: $main-box-color;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            padding-bottom: 60px;
+            padding-top: 60px;
+            min-height: 200px;
+
+            &.prior-1{
+                background: #FF5C5C;
+            }
+
+            &.prior-2{
+                background: #FF8847;
+            }
+
+            &.prior-3{
+                background: #9fa4b5;
+            }
+
+            &.done-true{
+
+                opacity: 0.3;
+                background: #666;
+
+            }
+
+            .settings-label{
+
+                position: absolute;
+                float: left;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 40px;
+                background: rgba(black, 0.2);
+
+                .icon{
+
+                    float: right;
+                    height: 100%;
+                    padding: 11px;
+                    text-align: center;
+                    color: white;
+
+                    &.reverse{
+
+                        float: left;
+
+                    }
+
+                    &.pin-true{
+
+                        background: rgba(black, 0.2)
+
+                    }
+
+                    &:hover{
+
+                        cursor: pointer;
+                        background: rgba(black, 0.2)
+
+                    }
+
+                }
+
+            }
+
+            .task-box-title{
+
+                font-size: 24px;
+                font-weight: 600;
+                float: left;
+                width: 100%;
+                margin-top: 0;
+
+            }
+            .task-box-dates{
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: lighten(cornflowerblue, 30%);
+                height: 40px;
+                font-size: 14px;
+                color: rgba(black, 0.5);
+
+
+                .date{
+
+                    float: left;
+                    width: 50%;
+                    text-align: center;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    height: 100%;
+                    padding: 5px;
+                    padding-top: 10px;
+
+                    &.event-date{
+
+                        background: rgba(black, 0.1);
+
+                    }
+
+
+                }
+
+            }
+
+        }
+        .add-new-task-link{
+
+            text-align: center;
+            font-size: 48px;
+            color: #333;
+            background: rgba(#ddd, 0.1);
+            transition: 0s all ease;
+            padding-top: 70px;
+
+            &:hover{
+
+                color: #ddd;
+                cursor: pointer;
+
+            }
+
+        }
+    }
 
 }
 
 .add-task-content{
 
-    width: 360px;
-    padding: 20px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 10% 30%;
     box-sizing: border-box;
     float: left;
+    background: #2A7AB6;
+    z-index: 99;
+    input,textarea{
+
+        padding: 25px 0!important;
+        float: left;
+        margin-bottom: 40px;
+        font-size: 22px!important;
+
+        &::placeholder{
+
+            color: darken(#2A7AB6, 10%);
+
+        }
+
+    }
+
+    button{
+
+        border-radius: 0;
+        border: 0;
+        padding: 20px;
+        font-size: 18px;
+
+    }
 
 }
