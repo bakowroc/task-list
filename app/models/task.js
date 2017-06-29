@@ -5,10 +5,10 @@ export default DS.Model.extend({
     title: DS.attr('string'),
     content: DS.attr('string'),
     isPinned: DS.attr('boolean', {
-        defaultValue: ()=> true
+        defaultValue: ()=> false
     }),
     prior: DS.attr('number', {
-        defaultValue: ()=> 1
+        defaultValue: ()=> null
     }),
     status: DS.attr('number', {
         defaultValue: ()=> false

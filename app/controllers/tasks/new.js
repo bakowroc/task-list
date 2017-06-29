@@ -29,7 +29,7 @@ export default Ember.Controller.extend({
                 date: null
             });
 
-            this.route.transitionTo('tasks');
+            this.transitionToRoute('tasks');
 
         }
     }

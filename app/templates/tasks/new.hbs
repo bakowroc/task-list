@@ -1,26 +1,24 @@
-<div class='add-task-content'>
-    {{#link-to 'tasks'}}Home{{/link-to}}
-    <form>
-      <div class="form-group">
-        {{input type="text" class="form-control" id="task-title" placeholder = 'Title of a new task' value=title}}
-      </div>
-      <div class="form-group">
-        {{input type="text" class="form-control" id="task-content" placeholder = 'Some description' value=content}}
-      </div>
-      <div class='form-group'>
-          {{input type='date' class='form-control' value=date}}
-      </div>
+<div class="task-overflow">
+    <div class="task-box add-task-content">
+        <div class="settings-label">
+            <h3 class="heading">Add task</h3>
+            {{#link-to 'tasks'}}
+            <span class="icon">
+                <span class="glyphicon glyphicon-remove"></span>
+            </span>
+            {{/link-to}}
+        </div>
+        <form>
+            {{input class="flat-input big" type="text" id="task-title" placeholder = 'Title of a new task' value=title}}
+            {{input class="flat-input" type="text" id="task-content" placeholder = 'Some description' value=content}}
 
-      <div class='form-group'>
-          <label>Pin that task</label>
-          {{input type='checkbox' class='form-control' checked=isPinned}}
-      </div>
-
-    <div class='form-group'>
-         <label>Select a priority</label>
-        {{input type='number' class='form-control' checked=prior max="3" value=prior}}
+            {{input class="flat-input no-1hd" type='checkbox' checked=isPinned}}
+            <label class="for-checkbox">Pin that task</label>
+            {{input class="flat-input no-1hd number pull-right" type='number'  max="3" min="1" value=prior placeholder="0"}}
+            <div class="task-box-dates">
+                <span class="date">{{input class="flat-input white-bg" type='date'  value=date}}</span>
+                <button {{action 'addTask'}} type="submit" class="date event-date">Confirm</button>
+            </div>
+        </form>
     </div>
-      <button {{action 'addTask'}} type="submit" class="btn btn-info btn-block">Submit</button>
-    </form>
-
 </div>

@@ -22,7 +22,7 @@
     .task-overflow{
 
         display: inline-block;
-        width: 24.85%;
+        width: calc(25% - 4px);
         box-sizing: border-box;
         padding: 10px;
         color: #fff;
@@ -160,46 +160,38 @@
             }
 
         }
-    }
 
-}
+        .add-task-content{
 
-.add-task-content{
+            .settings-label{
 
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    padding: 10% 30%;
-    box-sizing: border-box;
-    float: left;
-    background: #2A7AB6;
-    z-index: 99;
-    input,textarea{
+                .heading{
 
-        padding: 25px 0!important;
-        float: left;
-        margin-bottom: 40px;
-        font-size: 22px!important;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    float: left;
+                    padding: 11px;
+                    color: #444;
 
-        &::placeholder{
+                }
 
-            color: darken(#2A7AB6, 10%);
+                .icon{
+
+                    color: #444;
+
+                }
+
+            }
+
+            padding: 40px 20px;
+            background: #f0f0f0;
+
+            form{
+                padding: 0;
+                margin: 0;
+            }
 
         }
-
-    }
-
-    button{
-
-        border-radius: 0;
-        border: 0;
-        padding: 20px;
-        font-size: 18px;
-
     }
 
 }

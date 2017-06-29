@@ -17,23 +17,80 @@ body{
 
 }
 
-input, textarea{
-
-    border-radius: 0!important;
-    box-shadow: none!important;
-    border: 0!important;
-    border-bottom: 3px solid rgba(black, 0.1)!important;
-    resize: none!important;
-    background: none!important;
-    padding: 15px 0!important;
-    color: rgba(black, 0.4)!important;
-    font-size: 18px!important;
-    font-weight: 600!important;
-
-}
-
 .break-line-margin{
 
     margin-bottom: 40px;
 
 }
+
+
+.flat-input{
+
+    width: 100%;
+    float: left;
+    background: transparent;
+    border: 0;
+    font-size: 16px;
+    color: #222;
+    border-bottom: 2px solid rgba(black, 0.1);
+    margin-bottom: 10px;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+
+    &.white-bg{
+
+        color: #777;
+        padding: 0;
+        border: 0;
+        text-align: center;
+        font-size: 15px;
+
+    }
+
+
+    &.no-1hd{
+
+        width: auto;
+
+    }
+
+    &::placeholder{
+
+        color: #888;
+
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &.number{
+
+        float: right;
+        width: 50px;
+        color: #444;
+        padding: 10px;
+        font-size: 12px;
+        border: 0;
+
+
+    }
+
+}
+
+
+button{
+
+    border: 0;
+
+}
+
+.for-checkbox{
+
+    float: left;
+    margin-left: 10px;
+    color: #888
+}
+
+@import 'media.scss'
