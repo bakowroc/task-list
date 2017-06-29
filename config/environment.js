@@ -4,6 +4,15 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-sandbox',
     environment: environment,
+    contentSecurityPolicy: {'connect-src': "'self' wss://*.firebaseio.com"},
+    firebase: {
+        apiKey: "AIzaSyDXLnO1pQHawHCJLBPZZtB-3E0OiKvG4CA",
+        authDomain: "ember-sandbox-dcd63.firebaseapp.com",
+        databaseURL: "https://ember-sandbox-dcd63.firebaseio.com",
+        projectId: "ember-sandbox-dcd63",
+        storageBucket: "ember-sandbox-dcd63.appspot.com",
+        messagingSenderId: "136969758225"
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

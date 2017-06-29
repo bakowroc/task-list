@@ -1,0 +1,45 @@
+.main-navigation{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+    background: darken(cornflowerblue, 15%);
+    ul{
+
+        list-style: none;
+        display: inline-block;
+        padding-top: 10px;
+
+        li{
+
+            float: left;
+            padding: 0 40px;
+            a{
+
+                color: inherit;
+                display: block;
+                text-decoration: none;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #fff;
+
+                &:hover{
+
+                    opacity: 0.6;
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+}

@@ -1,0 +1,19 @@
+<div class='add-task-content'>
+    <h3>Add new task</h3>
+    <form>
+      <div class="form-group">
+        <label for="task-title">Task title:</label>
+        {{input type="text" class="form-control" id="task-title" placeholder = 'Type here' value=title}}
+      </div>
+      <div class="form-group">
+        <label for="task-content">Task content</label>
+        {{textarea class="form-control" id="task-content" placeholder = 'And here' value=content}}
+      </div>
+      <div class='form-group'>
+          <label for='task-date'>Task date</label>
+          {{input type='date' class='form-control' value=date}}
+      </div>
+      <button {{action 'addTask'}} type="submit" class="btn btn-info btn-block">Submit</button>
+    </form>
+
+</div>

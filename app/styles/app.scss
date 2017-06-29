@@ -1,0 +1,16 @@
+*{
+
+    transition: all 0.2s ease;
+
+}
+
+body{
+
+    font-family: 'Lato';
+    padding-top: 60px;
+
+}
+
+@import 'navigation.scss';
+@import 'tasks';
+@import "ember-bootstrap/bootstrap";

@@ -1,0 +1,23 @@
+{{outlet}}
+<div class='tasks-list'>
+
+    <h3>My tasks</h3>
+    <table class='table table-striped'>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each task in taskList}}
+            <tr>
+                <td>{{task.title}}</td>
+                <td>{{task.content}}</td>
+                <td>{{task.date}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
